@@ -10,6 +10,15 @@ $(function() {
 	var direction = 'newest';
 
 	/**
+	 * default active sort button is "newest"
+	 * if this timeline uses direction='oldest', change active button
+	 */
+	if (direction != 'newest') {
+             $('#sort-buttons a').removeClass('active');
+	     $('#sort-buttons a.sort-oldest').addClass('active');
+	}
+
+	/**
 	 * get data via Tabletop
 	 */
 	Tabletop.init({
@@ -84,7 +93,7 @@ $(function() {
 					}
 				},
 				sortBy: 'timestamp',
-				sortAscending: false,
+				sortAscending: (direction != 'newest'),
 				itemPositionDataEnabled: true
 			});
 		});
