@@ -21,7 +21,8 @@ $(function() {
 			el['display_date'] = el['displaydate'];
 			el['read_more_url'] = el['readmoreurl'];
 			el['photo_url'] = el['photourl'];
-			el['google_map'] = encodeURI(el['googlemap']);
+			if (el['googlemap'])
+				el['google_map'] = encodeURI(el['googlemap']);
 			el['google_map_label'] = encodeURI(el['googlemaplabel']);
 		}
 	});
