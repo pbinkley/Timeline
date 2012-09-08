@@ -145,6 +145,11 @@ body{
 #timeline .post .body img{
 	max-width: 247px;
 }
+/* iframe for Google map */
+#timeline .post .body iframe{
+	width: 247px;
+	height: 300px;
+}
 #timeline .post .text{
 	color: #393939;
 	font-family: Georgia, sans-serif;
