@@ -1,7 +1,7 @@
 // Script variables
 var timelineConfig = {
-	key: '0AsmHVq28GtVJdG1fX3dsQlZrY18zTVA2ZG8wTXdtNHc',
-	sheetName: 'Posts' // change to name of spreadsheet 'sheet' that contains the data
+        key: '0AsmHVq28GtVJdG1fX3dsQlZrY18zTVA2ZG8wTXdtNHc',
+        sheetName: 'Posts' // change to name of spreadsheet 'sheet' that contains the data
 }
  
 
@@ -21,6 +21,8 @@ $(function() {
 			el['display_date'] = el['displaydate'];
 			el['read_more_url'] = el['readmoreurl'];
 			el['photo_url'] = el['photourl'];
+			el['google_map'] = encodeURI(el['googlemap']);
+			el['google_map_label'] = encodeURI(el['googlemaplabel']);
 		}
 	});
 

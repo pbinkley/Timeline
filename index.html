@@ -79,7 +79,10 @@
           {{/if}}
           {{#if google_map}}
 
-		<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=37.771008,+-122.41175+(You+can+insert+your+text+here)&amp;hl=en&amp;ie=UTF8&amp;ll=37.771732,-122.411771&amp;spn=0.019947,0.035019&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q=37.771008,+-122.41175+(You+can+insert+your+text+here)&amp;hl=en&amp;ie=UTF8&amp;ll=37.771732,-122.411771&amp;spn=0.019947,0.035019&amp;t=h&amp;z=14&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+	  <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+		  src="https://maps.google.com/maps?q={{google_map}}+({{google_map_label}})&amp;hl=en&amp;ie=UTF8&amp;ll={{google_map}}&amp;t=m&amp;z=10&amp;iwloc=near&amp;output=embed"></iframe>
+	  <br />
+	  <small><a href="https://maps.google.com/maps?q={{google_map}}+({{google_map_label}})&amp;hl=en&amp;ie=UTF8&amp;ll={{google_map}}&amp;t=m&amp;z=10&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 	  {{/if}}
 	  {{#if caption}}
             <div class="caption">({{caption}})</div>
