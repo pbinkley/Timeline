@@ -21,9 +21,21 @@ $(function() {
 			el['display_date'] = el['displaydate'];
 			el['read_more_url'] = el['readmoreurl'];
 			el['photo_url'] = el['photourl'];
-			if (el['googlemap'])
-				el['google_map'] = encodeURI(el['googlemap']);
-			el['google_map_label'] = encodeURI(el['googlemaplabel']);
+			if (el['googlemap']) {
+			   /**
+			   * pipe-delimited list of params:
+			   * ll
+			   * label
+			   * t (type: m, k, h)
+			   * z (zoom level)
+			   */
+			   var tokens = el['googlemap'].split("|");
+				el['google_map'] = "q=" + encodeURI(tokens[0] + " (" + tokens[1] + ")")
+				  + "&ll=" + encodeURI(tokens[0])
+				  + "&t=" + encodeURI(tokens[2])
+				  + "&z=" + encodeURI(tokens[3])
+				  + "&hl=en&ie=UTF8&iwloc=near&output=embed";
+				}
 		}
 	});
 

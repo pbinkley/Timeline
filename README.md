@@ -18,9 +18,18 @@ Create a Google Spreadsheet with the following columns:
 * caption
 * body 
 * read more url
+* google map
 
 **Please note that the the _display date_ column must be in the format _Month day, Year_ (April 25, 2012) for proper javascript parsing.**
 **Also, all columns must be _plain text_ format, including the two date columns.**
+
+The _google map_ column contains a pipe-delimited list of parameters for a Google Map, which will appear in an iframe:
+* ll: lat,long
+* label: the text to appear in the popup on the marker
+* type: m=map, k=satellite, h=hybrid
+* zoom level
+
+E.g. 27.173186,78.041661|Taj Mahal|h|16
 
 Now follow the instructions over at Tabletop.js to publish the Spreadsheet.
 
